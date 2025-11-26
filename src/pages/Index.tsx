@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 interface Star {
   id: number;
@@ -91,7 +93,7 @@ const Index = () => {
               <Icon name="Sparkles" className="text-primary" size={24} />
               <h1 className="text-2xl font-bold text-primary">Профессионал</h1>
             </div>
-            <div className="flex gap-6">
+            <div className="flex items-center gap-6">
               <button
                 onClick={() => scrollToSection('constellation')}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
@@ -116,6 +118,12 @@ const Index = () => {
               >
                 Достижения
               </button>
+              <Link to="/professionals">
+                <Button variant="outline" size="sm">
+                  Вариант 2
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
